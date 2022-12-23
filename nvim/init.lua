@@ -1,7 +1,7 @@
-require('craftzdog.base')
-require('craftzdog.highlights')
-require('craftzdog.maps')
-require('craftzdog.plugins')
+require('iufb.base')
+require('iufb.highlights')
+require('iufb.maps')
+require('iufb.plugins')
 local has = vim.fn.has
 local is_mac = has "macunix"
 local is_win = has "win32"
@@ -11,11 +11,11 @@ require("sessions").setup({
   session_filepath = ".nvim/sessions",
 })
 if is_linux then
-  require('craftzdog.linux')
+  require('iufb.linux')
 end
 if is_mac then
-  require('craftzdog.macos')
+  require('iufb.macos')
 end
 if is_win then
-  require('craftzdog.windows')
+  require('iufb.windows')
 end
